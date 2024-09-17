@@ -4,12 +4,14 @@
   --clr--text--700: #2b2d42;
   --clr--text--400: #8d99ae;
   --clr--text--100: #edf2f4;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* CSS RESETS */
-*,::before,::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -18,33 +20,125 @@ body {
   line-height: 1.5;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-a, li {
+a,
+li {
   text-decoration: none;
   list-style: none;
   color: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
-/* BASE STYLES /
+/* BASE STYLES */
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--clr--text--700);
+}
 
-/ UTILITY CLASSES /
+/* UTILITY CLASSES */
+.btn {
+  background-color: var(--clr--accent);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--clr--text--100);
+  padding: 20px 0;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
 
-/ MEDIA QUERIES /
+/* MEDIA QUERIES */
 
-/ --- STYLES --- */
+/* --- STYLES --- */
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  max-width: 500px;
+  background-color: var(--clr--text--100);
+  padding: 48px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 42px;
+  border-radius: 4px;
+}
+
+.container > .btn:hover {
+  box-shadow: 0px 0px 24px 8px rgba(239, 35, 60, 0.3);
+  scale: 0.97;
+}
+
+.container label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* HEADER */
+
+.container__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__header__password {
+  box-shadow: none;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border: 2px solid var(--clr--text--100);
+}
+
+.container__header__password i {
+  font-size: 24px;
+}
+
+/* LONGITUD */
+
+/* CONFIGURACIONES */
+
