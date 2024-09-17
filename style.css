@@ -1,0 +1,50 @@
+/* ROOT */
+:root {
+  --clr--accent: #ef233c;
+  --clr--text--700: #2b2d42;
+  --clr--text--400: #8d99ae;
+  --clr--text--100: #edf2f4;
+}
+
+/* CSS RESETS */
+*,::before,::after {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a, li {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* BASE STYLES /
+
+/ UTILITY CLASSES /
+
+/ MEDIA QUERIES /
+
+/ --- STYLES --- */
