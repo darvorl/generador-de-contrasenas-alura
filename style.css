@@ -139,6 +139,57 @@ main {
 }
 
 /* LONGITUD */
+.container__longitud {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
 
-/* CONFIGURACIONES */
+#password__range {
+  appearance: none;
+  border-radius: 12px;
+  background-color: var(--clr--text--400);
+  height: 4px;
+  outline: none;
+  width: 100%;
+}
 
+#password_range::-webkit-slider-thumb {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--clr--text--700);
+  cursor: pointer;
+  border: none;
+}
+
+#password__range::-moz-range-thumb {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--clr--text--700);
+  cursor: pointer;
+  border: none;
+}
+
+.container__longitud__range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.container__longitud__range__value {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--clr--text--700);
+}
+
+/* CONFIGURACIÓN */
+.container__configuraciones {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
