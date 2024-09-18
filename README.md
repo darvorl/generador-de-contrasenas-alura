@@ -20,4 +20,4 @@ Durante este proyecto, profundicé en:
 Si tienes alguna pregunta o comentario, no dudes en contactarme a través de:
 
 - Correo electrónico: [valentinorodriguezlozada@gmail.com](mailto:valentinorodriguezlozada@gmail.com)
-- LinkedIn: [Dario Rodríguez Lozada](https://www.linkedin.com/in/dar%C3%ADo-rodriguez-lozada-2a9a69313/)
+- LinkedIn: [Dario Rodríguez Lozada](https://www.linkedin.com/in/dariorodriguezlozada/)
