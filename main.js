@@ -33,6 +33,7 @@ function generatePassword(
     numerosCheckbox.checked ||
     simboloCheckbox.checked
   ) {
+    passwordGenerated.textContent = "";
     if (incluirMayusculas) {
       caracteres += mayusculas;
     }
@@ -49,11 +50,12 @@ function generatePassword(
     for (let i = 0; i < longitud; i++) {
       password += caracteres[Math.floor(Math.random() * caracteres.length)];
     }
+
+    return password;
   } else {
     alert("Marca al menos un checkbox!");
+    return "Password"
   }
-
-  return password;
 }
 
 function copyToClipboard(text) {
@@ -76,13 +78,13 @@ copyIcon.addEventListener("click", function () {
     copyToClipboard(password);
   }
 });
-copyIcon.addEventListener("click", function() {
-  copyIcon.style.opacity = "20%"
+copyIcon.addEventListener("click", function () {
+  copyIcon.style.opacity = "20%";
 
-  setTimeout(function() {
-    copyIcon.style.opacity = "100%"
-  }, 400)
-})
+  setTimeout(function () {
+    copyIcon.style.opacity = "100%";
+  }, 400);
+});
 
 window.onload = function () {
   var inputs = document.querySelectorAll(
@@ -95,7 +97,6 @@ window.onload = function () {
 };
 
 generateBtn.addEventListener("click", function () {
-  passwordGenerated.textContent = "";
   passwordGenerated.textContent = generatePassword(
     passwordRange.value,
     mayusculasCheckbox.checked,
