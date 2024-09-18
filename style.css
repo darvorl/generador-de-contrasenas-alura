@@ -1,9 +1,10 @@
 /* ROOT */
 :root {
-  --clr--accent: #ef233c;
-  --clr--text--700: #2b2d42;
-  --clr--text--400: #8d99ae;
-  --clr--text--100: #edf2f4;
+  --clr--accent: hsl(214, 100%, 44%);
+  --clr--text--700: hsl(235, 21%, 21%);
+  --clr--text--400: hsl(218, 17%, 62%);
+  --clr--text--200: hsl(197, 24%, 84%);
+  --clr--text--100: hsl(197, 24%, 94%);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -79,6 +80,10 @@ h1 {
   transition: 0.4s;
 }
 
+input {
+  cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 
 /* --- STYLES --- */
@@ -91,18 +96,18 @@ main {
 
 .container {
   flex: 1;
-  max-width: 500px;
+  max-width: 450px;
   background-color: var(--clr--text--100);
-  padding: 48px 72px;
+  padding: 32px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 42px;
+  gap: 32px;
   border-radius: 4px;
 }
 
 .container > .btn:hover {
-  box-shadow: 0px 0px 24px 8px rgba(239, 35, 60, 0.3);
+  box-shadow: 0px 0px 24px 8px rgba(0, 97, 223, 0.3);
   scale: 0.97;
 }
 
@@ -117,7 +122,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
   align-items: center;
   justify-content: center;
 }
@@ -135,26 +140,34 @@ main {
 }
 
 .container__header__password i {
-  font-size: 24px;
+  font-size: 28px;
+}
+
+/* PASSWORD SETTINGS */
+.container__password__settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /* LONGITUD */
 .container__longitud {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 4px;
 }
 
-#password__range {
+#password-range {
   appearance: none;
   border-radius: 12px;
-  background-color: var(--clr--text--400);
+  background: linear-gradient(to right, var(--clr--accent) 50%, var(--clr--text--400) 50%);
+  transition: background 0.15s ease-in-out;
   height: 4px;
   outline: none;
-  width: 100%;
+  width: 87%;
 }
 
-#password_range::-webkit-slider-thumb {
+#password-range::-webkit-slider-thumb {
   appearance: none;
   width: 26px;
   height: 26px;
@@ -164,7 +177,7 @@ main {
   border: none;
 }
 
-#password__range::-moz-range-thumb {
+#password-range::-moz-range-thumb {
   appearance: none;
   width: 26px;
   height: 26px;
@@ -178,7 +191,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
 }
 
 .container__longitud__range__value {
@@ -191,5 +203,46 @@ main {
 .container__configuraciones {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 12px;
+}
+
+.container__configuraciones__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container__configuraciones__inputs .input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__configuraciones__inputs .input label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.container__configuraciones__inputs .input input {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 2px solid var(--clr--accent);
+}
+
+.input__check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__check i {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+}
+
+#copy-icon {
+  transition: 0.2s;
 }

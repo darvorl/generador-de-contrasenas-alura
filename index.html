@@ -22,27 +22,58 @@
         <div class="container__header">
           <h1>GENERADOR DE CONTRASEÑAS</h1>
           <div class="container__header__password btn">
-            <div class="container__header__password__generated">
-              h7sdVF#"D5F%$fG
+            <div class="container__header__password__generated" id="password-generated">Password
             </div>
-            <i class="bx bx-copy bx-tada-hover"></i>
+            <i id="copy-icon" class="bx bx-copy bx-tada-hover"></i>
           </div>
         </div>
 
-        <div class="container__longitud">
-          <label for="password__range">LONGITUD:</label>
-          <div class="container__longitud__range">
-            <input type="range" name="" id="password__range" min="6" max="18" value="12">
-            <div class="container__longitud__range__value">0</div>
+        <div class="container__password__settings">
+          <div class="container__longitud">
+            <label for="password-range">LONGITUD:</label>
+            <div class="container__longitud__range">
+              <input
+                type="range"
+                name=""
+                id="password-range"
+                min="6"
+                max="18"
+                value="12"
+                autocomplete="off"
+              />
+              <div class="container__longitud__range__value" id="range-value">
+                12
+              </div>
+            </div>
+          </div>
+
+          <div class="container__configuraciones">
+            <label for="">CONFIGURACIONES:</label>
+            <div class="container__configuraciones__inputs">
+              <div class="input">
+                <label for="incluir-mayusculas">Incluir Mayúsculas</label>
+                <input type="checkbox" name="" id="incluir-mayusculas" autocomplete="off" />
+              </div>
+
+              <div class="input">
+                <label for="incluir-minusculas">Incluir Minúsculas</label>
+                <input type="checkbox" name="" id="incluir-minusculas" autocomplete="off" />
+              </div>
+
+              <div class="input">
+                <label for="incluir-numeros">Incluir Números</label>
+                <input type="checkbox" name="" id="incluir-numeros" autocomplete="off" />
+              </div>
+
+              <div class="input">
+                <label for="incluir-simbolos">Incluir Símbolos</label>
+                <input type="checkbox" name="" id="incluir-simbolos" autocomplete="off" />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="container__configuraciones">
-          <label for="">CONFIGURACIONES:</label>
-
-        </div>
-
-        <button class="btn">GENERAR</button>
+        <button class="btn" id="generate-password">GENERAR</button>
       </div>
     </main>
     <script src="./main.js"></script>
